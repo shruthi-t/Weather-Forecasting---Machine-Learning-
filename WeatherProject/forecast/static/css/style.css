@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  line-height: normal;
+}
+
+body {
+  background-color: #080808;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  max-width: 1200px;
+  border-radius: 25px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main.clouds { background-image: url('../img/cloudy.jpeg'); }
+main.sunny { background-image: url('../img/sunny.jpeg'); }
+main.overcast { background-image: url('../img/overcast.jpeg'); }
+main.mist, main.Mist, main.haze, main.smoke { background-image: url('../img/mist.jpeg'); }
+main.rain { background-image: url('../img/rain.jpeg'); }
+main.snow { background-image: url('../img/snow.jpeg'); }
+main.sleet { background-image: url('../img/sleet.jpeg'); }
+main.drizzle { background-image: url('../img/drizzle.jpeg'); }
+main.thunder, main.thundery { background-image: url('../img/thunder.jpeg'); }
+main.blizzard { background-image: url('../img/blizzard.jpeg'); }
+main.fog { background-image: url('../img/fog.jpeg'); }
+main.ice { background-image: url('../img/ice.jpeg'); }
+main.shower { background-image: url('../img/shower.jpeg'); }
+main.showers { background-image: url('../img/showers.jpeg'); }
+main.clear { background-image: url('../img/clear.jpeg'); }
+
+.side-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  padding: 40px;
+  height: 100%;
+  border-right: 1px solid rgba(183, 170, 170, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(22.5px);
+}
+
+.search-container {
+  width: 100%;
+  margin-bottom: 55px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ffffff;
+}
+
+.geo-input {
+  all: unset;
+  flex: 1;
+  margin: 0 10px;
+  color: white;
+  font-size: 13px;
+}
+
+.geo-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.day-stats {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.day-stats__teperature_value {
+  color: #fff;
+  font-size: 50px;
+}
+
+.day-stats__feelslike {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 9px 0 6px;
+}
+
+.day-stats_conditions {
+  list-style: none;
+  margin-top: 20px;
+  color: #fff;
+  width: 100%;
+}
+
+.day-stats_conditions li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.day-stats_condition {
+  font-size: 24px;
+}
+
+.main-container {
+  flex: 1;
+  padding: 40px;
+  background-image: url('../img/main-blur.png');
+  background-size: cover;
+}
+
+.secondary-title {
+  margin-bottom: 17px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.weather__primary-title {
+  margin-bottom: 16px;
+  color: #fff;
+  font-size: 38px;
+  letter-spacing: -1.9px;
+}
+
+.weather__location {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.weather__location-text {
+  color: #fff;
+  font-size: 13px;
+}
+
+.weather__primary-stats {
+  max-width: 360px;
+  color: #fff;
+  font-size: 13px;
+  margin-bottom: 60px;
+}
+
+/* Forecast Section */
+.forecast {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.forecast-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.forecast-item:hover {
+  transform: scale(1.05);
+}
+
+.forecast-time {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.forecast-temperature {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.forecastWindText {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#chart {
+  margin: 30px auto;
+  width: 100%;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .side-container {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .main-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .forecast {
+    justify-content: center;
+  }
+
+  .forecast-item {
+    margin: 10px;
+  }
+}
