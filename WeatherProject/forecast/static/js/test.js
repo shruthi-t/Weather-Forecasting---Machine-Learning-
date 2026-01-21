@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const forecastItems = document.querySelectorAll('.forecast-item');
 
     const times = [];
-    const times = [];
 
     forecastItems.forEach(item => {
         const time = item.querySelector('.forecast-item').textContent;
